@@ -1,5 +1,6 @@
 import CreateTodoPage from "../pages/CreateTodo";
 import TodoListPage from "../pages/TodoList";
+import UsersPage from "../pages/UsersPage";
 
 const routes = [
     {
@@ -9,6 +10,10 @@ const routes = [
     {
         element: <TodoListPage/>,
         path: '/'
+    },
+    {
+        element: <UsersPage/>,
+        path: '/users'
     }
 ]
 

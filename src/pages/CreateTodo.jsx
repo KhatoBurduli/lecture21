@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { addTodoAction } from "../store/todo/todo.actions"
 import { Link } from "react-router-dom"
+import { addTodo } from "../store/todo/todo.slice"
 
 const CreateTodoPage = () => {
     const dispatch = useDispatch()
@@ -11,7 +11,7 @@ const CreateTodoPage = () => {
     const onSubmit = (e) => {
         e.preventDefault()
 
-        dispatch(addTodoAction(value))
+        dispatch(addTodo(value))
         setValue('')
     }
     return <form onSubmit={onSubmit}>
